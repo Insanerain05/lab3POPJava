@@ -13,7 +13,7 @@ public class Consumer extends Thread {
         for (int i = 0; i < itemCount; i++) {
             try {
                 manager.empty.acquire();
-                Thread.sleep(500); // Імітація споживання
+                Thread.sleep(500);
                 manager.access.acquire();
 
                 String item = manager.storage.remove(0);

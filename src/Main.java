@@ -22,7 +22,6 @@ public class Main {
             consumers[i] = new Consumer(consumerItems[i], manager);
         }
 
-        // Чекаємо завершення потоків
         for (Producer p : producers) {
             try {
                 p.join();
